@@ -1,0 +1,47 @@
+.titleimg{
+    height: 100%;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    height: 15%;
+    width: 100%;
+}
+
+.img{
+    height: 85%;
+    width: 100%;
+    padding-bottom: 15px;
+}
+img{
+    max-width: 100%;
+    max-height: 300px;
+}
+
+.previmg{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.arrows{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 15%;
+}
+.arrowsmini{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-height: 80%;
+    width: 100%;
+}
+
+.arrow{
+    max-width: 100%;
+    max-height: 30%;
+    margin: auto;
+}

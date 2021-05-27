@@ -1,0 +1,57 @@
+<form #f="ngForm" (ngSubmit)="upload(f)">
+  <h1 *ngIf="blogEditing === false">New Post</h1>
+  <h1 *ngIf="blogEditing === true">Edit Post</h1>
+  <p style="color: #ff3c00e8; font-size: 20px">{{error}}</p>
+  <div class="row" style="margin: 0px 0px;">
+    <div class="col-md-12">
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="md-form amber-textarea active-amber-textarea-2">
+            <i class="fas fa-angle-double-right prefix"></i>
+            <textarea name="title" [(ngModel)]="blog['title']" class="md-textarea form-control" rows="6"></textarea>
+            <label>Title</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="md-form amber-textarea active-amber-textarea-2">
+            <i class="fas fa-angle-double-right prefix"></i>
+            <textarea name="preview" [(ngModel)]="blog['preview']" class="md-textarea form-control" rows="6"></textarea>
+            <label>Preview Text</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="md-form amber-textarea active-amber-textarea-2">
+            <i class="fas fa-pencil-alt prefix"></i>
+            <textarea name="description" [(ngModel)]="blog['description']" class="md-textarea form-control"
+              rows="6"></textarea>
+            <label>Description</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <div class="md-form mb-0">
+            <mat-form-field>
+              <input matInput name="date" [matDatepicker]="picker" [(ngModel)]="blog['date']" class="form-control">
+              <mat-placeholder class="placeholder">Date of occurence</mat-placeholder>
+              <mat-datepicker-toggle matPrefix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2>Pictures:</h2> <br>
+  <app-upload [editingMap]="editImgsMap" [editingIdx]="editImgsIdx"></app-upload>
+  <br>
+  <input class="fbtn btn goright " [disabled]="STATE_DISABLED" type="submit" value="Submit">
+</form>
+<button class="fbtn btn goright btm-sm" (click)="cancel()">Cancel</button>

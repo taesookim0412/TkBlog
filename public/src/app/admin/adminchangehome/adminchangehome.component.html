@@ -1,0 +1,17 @@
+<form #f="ngForm" (ngSubmit)="changeHome(f)">
+  <p style="color: #ff3c00e8; font-size: 20px">{{error}}</p>
+  <h3>Upload File:</h3>
+  <div class="upload-btn-wrapper">
+    <button class="fbtn btn float-left">Upload File</button>
+    <input type="file" name="home" enctype="multipart/form-data" accept="image/*" (change)="onChange($event)">
+  </div>
+  <br>
+  <div *ngIf="pImg">
+    <h1>New Image:</h1>
+    <img class="pImg" [src]="pImg" alt="previewimg">
+  </div>
+  <input class="fbtn btn goright " [disabled]="STATE_DISABLED" type="submit" value="Submit">
+</form>
+<button class="fbtn btn goright btm-sm" (click)="cancel()">Cancel</button>
+<h3>Old Image:</h3>
+<img class="pImg" [src]="oldHome">

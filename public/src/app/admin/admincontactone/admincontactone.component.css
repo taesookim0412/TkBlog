@@ -1,0 +1,21 @@
+.row{
+    display: flex;
+    justify-content: center;
+    background-color: #c5c5c5;
+}
+
+.back{
+    text-align: left;
+}
+
+.navrow{
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row{
+    padding-bottom: 10px;
+}

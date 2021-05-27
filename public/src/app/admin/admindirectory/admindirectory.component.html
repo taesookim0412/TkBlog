@@ -1,0 +1,20 @@
+<span *ngIf="url==='directory'">
+    <h1>Directory</h1>
+    <h1 [routerLink]="['/admin','blog']" class="box">Blog</h1>
+    <h1 [routerLink]="['/admin','gallery']" class="box">Gallery</h1>
+    <h1 [routerLink]="['/admin','change', 'home']" class="box">Change Home</h1>
+    <h1 [routerLink]="['/admin','contact']" class="box">Contact Form Submissions</h1>
+</span>
+
+<span *ngIf="url==='blog'">
+    <h1>Blog</h1>
+    <h1 [routerLink]="['new']" class="box">New Post</h1>
+    <h1 [routerLink]="['edit']" class="box">Edit Post</h1>
+</span>
+
+<span *ngIf="url==='gallery'">
+    <h1>Gallery</h1>
+    <h1 [routerLink]="['/admin', 'gallery' , 'cats']" class="box">Cats</h1>
+    <h1 [routerLink]="['/admin', 'gallery' , 'dogs']" class="box">Dogs</h1>
+    <h1 [routerLink]="['/admin', 'gallery' , 'cars']" class="box">Cars</h1>
+</span>

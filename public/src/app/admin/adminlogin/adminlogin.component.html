@@ -1,0 +1,20 @@
+<!-- Default form login -->
+<form *ngIf="isLogged===false" #f="ngForm" (ngSubmit)="login(f)" class="text-center border p-5 form" style="border-color: #746767!important">
+
+    <p class="h4 mb-4">Sign in</p>
+
+    <span *ngIf="errors">{{errors}}<br></span>
+    <!-- Email -->
+    <input type="text" name="user" class="form-control mb-4" placeholder="Username" [(ngModel)]="user">
+
+    <!-- Password -->
+    <input type="password" name="pass" class="form-control mb-4" placeholder="Password" [(ngModel)]="pass">
+
+    <input style="background-color: #6a6c6d!important;" class="btn btn-info btn-block my-4" type="submit" value="Sign in">
+  Username: demo
+  <br>
+  password: demo
+  <br>
+
+</form>
+<!-- Default form login -->

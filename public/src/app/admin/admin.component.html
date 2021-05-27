@@ -1,0 +1,12 @@
+<div id="wrapper">
+    <br><a style="text-align:center; font-size: 26px; margin-top: 15px;" (click)="goHome()">Admin Panel</a><br>
+
+    <button mat-button style="margin-right: 35vw;" *ngIf="cookie===true" (click)="goBack()">Back</button>
+    <a href="/"><button mat-button style="position: relative">Landing Page</button></a>
+    <div class="nav"></div>
+
+    <div id="contents">
+        <app-adminlogin *ngIf="cookie===false" [isLogged]="cookie" (updateParent)="checkCookie()"></app-adminlogin>
+        <router-outlet *ngIf="cookie===true"></router-outlet>
+    </div>
+</div>

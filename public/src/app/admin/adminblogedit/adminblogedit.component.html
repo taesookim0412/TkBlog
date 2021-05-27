@@ -1,0 +1,22 @@
+<span *ngIf="blog['_id']; else allBlogs">
+    <app-adminblogform [blogEditing]=true [blog]="blog" [editImgs]="blogImgs"></app-adminblogform>
+</span>
+
+<ng-template #allBlogs>
+    <span *ngIf="blogs[0]">
+        <span *ngFor="let blog of blogs; index as i;">
+            <div class="row" (click)="selectPost(blog)" style="font-size: 26px; margin: 0px 0px;">
+                <div class="col-md-12">
+                    <div style="background-color: #c5c5c5;" class="smlbox row align-items-center">
+                        <div class="col-md-6">
+                            {{blog.title}}
+                        </div>
+                        <div class="col-md-6">
+                            <img class="previmg" *ngIf="blog.imgs[0]" src="{{blog.imgs[0].url}}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </span>
+    </span>
+</ng-template>

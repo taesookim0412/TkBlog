@@ -1,0 +1,38 @@
+<div id="content">
+    <div class="navsticky">
+        <h3 class="h2-responsive navrowflex">
+            <a *ngIf="STATE_CHILD === 'true'; else notChild" (click)="backToBlogs()" tabIndex="0" class="text-left">
+                <i class="fas fa-arrow-left"></i>
+                Back to blogs</a>
+            <ng-template #notChild>
+                <a [routerLink]="['/','blog',page, idx]" tabindex="0" class="text-left">
+                    <i class="fas fa-arrow-left"></i>
+                    Show in blogs</a>
+            </ng-template>
+            <a class="text-right" [routerLink]="['/','collection', 'archive']" tabindex="0">Archives <i
+                    class="fas fa-arrow-right"></i></a>
+        </h3>
+        <h6 class="h6-responsive navrowblock">
+            <span class="share" [matMenuTriggerFor]="shareLink">Share<i
+                    class="fas fa-external-link-square-alt"></i></span>
+            <mat-menu #shareLink="matMenu">
+                <div class="row" style="margin: 0px 0px;" (click)="copyToClipboard()">
+                    <div class="col-md-10 urlscroll url">
+                        {{url}}
+                    </div>
+                    <div class="col-md-2 copy text-right" (click)="copyToClipboard()">
+                        <span class="copytxt"><i class="fas fa-clipboard"></i>Copy
+                        </span>
+                    </div>
+                </div>
+            </mat-menu>
+        </h6>
+    </div>
+    <h2 class="h2-responsive nomargin title">{{blogEntry['title']}}
+        <span class="small">-- {{blogEntry['date'] | date: 'MMMM d, y'}}</span></h2>
+    <h3 class="h3-responsive preview">{{blogEntry['preview']}}</h3>
+    {{blogEntry['description']}}<br>
+    <div *ngFor="let img of blogEntry['imgs']">
+            <img class="blogimg" (click)="showImage(img['url'])" [src]="img['url']">
+    </div>
+</div>

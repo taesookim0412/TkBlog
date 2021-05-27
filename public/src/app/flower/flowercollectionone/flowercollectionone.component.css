@@ -1,0 +1,61 @@
+.title{
+    font-size: 42px;
+}
+
+.preview{
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.navsticky{
+    position: sticky;
+    top: 0px;
+    width: 100%;
+}
+
+.navrowflex{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navrowblock{
+    width: 100%;
+    text-align: right;
+}
+
+.small{
+    font-size: 15px;
+}
+
+.share:hover{
+    cursor: pointer;
+    background-color: rgba(85, 85, 85, 0.18);;
+}
+
+.urlscroll{
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.copy:hover{
+    cursor: pointer;
+    --a: rgba(85, 85, 85, 0.18);;
+}
+.copytxt{
+    background-color: var(--a);
+}
+.copy{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.url{
+    padding-left: 20px;
+    padding-right: 0px;
+    width: 610px;
+}
+
+.url:hover {
+    cursor: pointer;
+    background-color: rgba(85, 85, 85, 0.18);;
+}

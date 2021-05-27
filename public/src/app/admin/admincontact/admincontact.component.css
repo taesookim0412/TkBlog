@@ -1,0 +1,22 @@
+.row{
+    display: flex;
+    justify-content: center;
+    background-color: #c5c5c5;
+}
+
+.col-form-label{
+    padding: 0px;
+    line-height: 1.0;
+}
+
+.form-group{
+    margin-bottom: 0px;
+}
+
+.bnav{
+    position: sticky;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}

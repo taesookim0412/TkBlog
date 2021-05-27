@@ -1,0 +1,42 @@
+<h3 class="h2=responsive bnav">
+  <a (click)="goPrev()" tabindex="0"><i class="fas fa-arrow-left fa-x2"></i>Previous</a>
+  <a (click)="goNext()" tabindex="0">Next<i class="fas fa-arrow-right fa-x2"></i></a>
+</h3>
+
+<div class="smlbox" [routerLink]="['/','admin','contact','one',contact['_id'], page]"
+  *ngFor="let contact of contactsSlice">
+  <div class="row" style="margin: 0px 0px auto;">
+    <!-- Horizontal material -->
+    <!-- Grid row -->
+    <div class="col-md-12">
+      <div class="row">
+        <!-- Material input -->
+        <div class="col">ID #</div>
+        <div class="col">
+          {{ contact['cId'] }}
+        </div>
+      </div>
+      <!-- Grid row -->
+      <!-- Grid row -->
+      <div class="form-row">
+        <!-- Material input -->
+        <div class="col">Name</div>
+        <div class="col">
+          {{ contact['firstName'] }} {{contact['lastName']}}
+        </div>
+      </div>
+      <!-- Grid row -->
+      <!-- Grid row -->
+      <div class="form-row">
+        <!-- Material input -->
+        <div class="col">Date of Occurence</div>
+        <div class="col">
+          {{contact['date'] | date: 'MMMM d, y'}}
+        </div>
+      </div>
+      <!-- Grid row -->
+      <!-- Grid row -->
+    </div>
+    <!-- Grid row -->
+  </div>
+</div>

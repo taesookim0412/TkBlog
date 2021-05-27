@@ -1,0 +1,35 @@
+.flex{
+    display: flex;
+    height: 100%;
+}
+
+.fLeft{
+    height: 100%;
+    width: 60%;
+    text-align: left;
+}
+
+.fRight{
+    height: 100%;
+    width: 40%;
+}
+
+h2{
+    margin-top: 0px!important;
+    background-image: linear-gradient(#717171 10%, #585858);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h1{
+    background-image: linear-gradient(#717171 10%, #585858);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+agm-map{
+    width: 100%;
+    height: 250px;
+}

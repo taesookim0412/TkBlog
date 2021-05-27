@@ -1,0 +1,150 @@
+<div id="content">
+  <!--Section: Contact v.2-->
+  <section class="mb-4">
+
+    <!--Section heading-->
+<!--    <h2 class="h1-responsive font-weight-bold text-center my-4">Contact</h2>-->
+    <!--Section description-->
+    <br>
+    <p class="text-center w-responsive mx-auto mb-5">Found a reason to leave a message?
+      <br>Your inquiry is of utmost importance.</p>
+
+
+    <div class="row" style="margin: 0px 0px;">
+
+      <!--Grid column-->
+      <div class="col-md-9 mb-md-0 mb-5">
+        <form [formGroup]="contactForm" (ngSubmit)="contact()">
+
+          <!--Grid row-->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="md-form mb-0">
+                <mat-form-field (click)="picker.open()">
+                  <input matInput [matDatepicker]="picker" [min]="today" formControlName="date" class="form-control nospace" placeholder="Date of occurence">
+                  <mat-error *ngIf="contactFormC['date']['invalid']">{{required}}</mat-error>
+                  <mat-datepicker-toggle matPrefix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <!--Grid row-->
+
+
+
+          <!--Grid row-->
+          <div class="row">
+
+            <!--Grid column-->
+            <div class="col-md-6">
+              <div class="md-form mb-0">
+                <mat-form-field>
+                  <input matInput class="form-control nospace" formControlName="firstName" placeholder="First Name">
+                  <mat-error *ngIf="contactFormC['firstName']['invalid']">{{required}}</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-md-6">
+              <div class="md-form mb-0">
+                <mat-form-field>
+                  <input matInput class="form-control nospace" formControlName="lastName" placeholder="Last Name">
+                  <mat-error *ngIf="contactFormC['lastName']['invalid']">{{required}}</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+            <!--Grid column-->
+
+          </div>
+          <!--Grid row-->
+
+
+          <!--Grid row-->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="md-form mb-0">
+                <mat-form-field>
+                  <input matInput class="form-control nospace" formControlName="email" placeholder="Email">
+                  <mat-error *ngIf="contactFormC['email']['invalid']">{{getEmailErrors()}}</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <!--Grid row-->
+
+          <!--Grid row-->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="md-form mb-0">
+                <mat-form-field>
+                  <input matInput class="form-control nospace" formControlName="phone"
+                    placeholder="Phone Number">
+                  <mat-error *ngIf="contactFormC['phone']['invalid']">{{required}}</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <!--Grid row-->
+          <!--Grid row-->
+          <div class="row">
+            <div class="col-md-12 unset">
+              <div class="md-form" style="color: #757575;">Decorations:</div>
+              <div class="custom-control custom-checkbox">
+                <mat-checkbox formControlName="red">Red</mat-checkbox>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <mat-checkbox formControlName="green">Green</mat-checkbox>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <mat-checkbox formControlName="blue">Blue</mat-checkbox>
+              </div>
+            </div>
+          </div>
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-md-12">
+              <div class="md-form">
+                <textarea type="text" rows="7" class="form-control md-textarea"
+                  formControlName="comments"></textarea>
+                <label for="comments">Comments</label>
+              </div>
+            </div>
+          </div>
+          <!--Grid row-->
+
+          <div class="text-center text-md-left">
+            <input type="submit" [disabled]="STATE_DISABLED" value="Send" class="btn btn-primary">
+          </div>
+        </form>
+
+        <div class="status"></div>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-md-3 text-center">
+        <ul class="list-unstyled mb-0">
+          <li><i class="fas fa-map-marker-alt fa-2x"></i>
+            <p>Los Angeles, CA, USA</p>
+          </li>
+
+          <li><i class="fas fa-phone mt-4 fa-2x"></i>
+            <p>1 (213) 555-0000</p>
+          </li>
+
+          <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+            <p>taesoo.kim0412@gmail.com</p>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+
+    </div>
+
+  </section>
+  <!--Section: Contact v.2-->
+</div>

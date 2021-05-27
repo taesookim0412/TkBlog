@@ -1,0 +1,21 @@
+<div *ngIf="oneBlog['title'] === undefined">
+  <div id="content" class="test">
+    <h3 class="h2-responsive bnav">
+      <a (click)="goPrev()" tabindex="0"><i class="fas fa-arrow-left fa-x2"></i> Previous</a>
+      <a (click)="goNext()" tabindex="0">Next <i class="fas fa-arrow-right fa-x2"></i></a>
+    </h3>
+    <div #blogs *ngFor="let blog of blogsSlice; index as i; trackBy: trackByFn; let last = last" class="blogpost bp{{i}}">
+      <div class="oneblog" (click)="showOneBlog(blog, i)">
+        <h2 class="h2-responsive nomargin title">{{blog['title']}}</h2>
+        <h3 class="h3-responsive preview">{{blog['preview']}}<span class="small">-- Posted on
+            {{blog['created'] | date: 'MMMM d, y'}}</span></h3>
+      </div>
+      <div *ngFor="let img of blog['imgs']">
+          <img class="blogimg" (click)="showImage(img['url'])" [src]="img['url']" alt="img">
+      </div>
+    </div>
+  </div>
+</div>
+<app-flowercollectionone *ngIf="oneBlog['title']" [blogEntry]="oneBlog" STATE_CHILD="true" [page]="page" [idx]="idx"
+  (goBack)="removeOneBlog()">
+</app-flowercollectionone>

@@ -1,0 +1,18 @@
+.box {
+  --outer-box: #d2d2d2;
+  --inner-box: #234b6d5e;
+  height: 200px;
+  width: 100%;
+  border: 0.5px solid #7b98ff7d;
+  padding-top: 80px;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+  background-image: linear-gradient(to top, var(--outer-box) 0%, var(--inner-box) 2%,var(--inner-box) 98% , var(--outer-box) 100%);
+  color: #b9b9b9;
+}
+.box:hover{
+  --outer-box: #464646;
+  --inner-box: #2571b15e;
+  background-image: linear-gradient(to top, var(--outer-box) 0%, var(--inner-box) 2%,var(--inner-box) 98% , var(--outer-box) 100%);
+  cursor: pointer;
+}

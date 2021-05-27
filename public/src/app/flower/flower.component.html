@@ -1,0 +1,38 @@
+<div id="wrapper">
+  <div id="page">
+    <header>
+      <div class="socialmedia">
+        <a href="/"><img width="32" height="32"
+            src="https://tkblogkim.s3-us-west-1.amazonaws.com/misc/facebook.png"></a>
+        <a href="/"><img width="32" height="32"
+            src="https://tkblogkim.s3-us-west-1.amazonaws.com/misc/instagram_icon.png" alt="Instagram"></a>
+      </div>
+      <div id="logoflex">
+        <a [routerLink]="['/']" style="font-size: 6em;color: #656565;">
+<!--          <img id="logo" src="https://tkblogkim.s3-us-west-1.amazonaws.com/misc/logo.jpg" alt="coloruh logo">-->
+          TkBlog
+        </a>
+      </div>
+      <nav>
+        <ul class="navul" style="margin-bottom: 0px;">
+          <li class="navli" [routerLink]="['/']">HOME</li>
+          <li class="navli" [routerLink]="['/', 'about']">ABOUT</li>
+          <li class="navli" [routerLink]="['/', 'blog']">BLOG</li>
+          <li class="navli" [matMenuTriggerFor]="gallery">GALLERY</li>
+          <mat-menu #gallery="matMenu">
+            <li class="navli menuli" [routerLink]="['/', 'collection', 'archive']">ARCHIVE</li>
+            <li class="navli menuli" [routerLink]="['/', 'gallery', 'cats']">CATS</li>
+            <li class="navli menuli" [routerLink]="['/', 'gallery', 'dogs']">DOGS</li>
+            <li class="navli menuli" [routerLink]="['/', 'gallery', 'cars']">CARS</li>
+          </mat-menu>
+          <li class="navli" [routerLink]="['/', 'contact']">CONTACT</li>
+          <li class="navli" [routerLink]="['/', 'admin']">ADMIN</li>
+        </ul>
+      </nav>
+    </header>
+    <router-outlet></router-outlet>
+    <footer style="text-align: center;">
+      <div id="footertext">taesoo.kim0412@gmail.com</div>
+    </footer>
+  </div>
+</div>

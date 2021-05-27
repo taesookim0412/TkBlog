@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+:root{
+  --hover-color: rgba(85, 85, 85, 0.18);
+}
+.custom-modalbox > mat-dialog-container {
+    padding:0px;
+    overflow: hidden;
+}
+
+.cdk-global-scrollblock {
+    position: initial;
+    width: initial;
+    overflow: hidden;
+}
+
+.cdk-overlay-pane > .mat-menu-panel{
+  max-width: 650px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000000a3;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  margin:0 0;
+  padding:0 0;
+  word-wrap: break-word;
+}
+
+a{
+  color: #686868;
+}
+
+a:hover {
+  color: #686868;
+  background: var(--hover-color);
+}
+
+.nomargin{
+  margin: 0px 0px;
+}
+
+simple-snack-bar span {
+  margin:auto;
+  text-align: center;
+}

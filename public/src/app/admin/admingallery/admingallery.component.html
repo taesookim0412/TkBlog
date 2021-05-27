@@ -1,0 +1,44 @@
+<form #f="ngForm" (ngSubmit)="upload(f)">
+  <p style="color: #ff3c00e8; font-size: 20px">{{error}}</p>
+  <h1 *ngIf="url==='cats'">Upload Cats:</h1>
+  <h1 *ngIf="url==='dogs'">Upload Dogs:</h1>
+  <h1 *ngIf="url==='cars'">Upload Cars:</h1>
+  <app-upload></app-upload>
+  <input class="fbtn btn goright " [disabled]="STATE_DISABLED" type="submit" value="Submit">
+</form>
+<button class="fbtn btn goright btm-sm" (click)="cancel()">Cancel</button>
+<div *ngIf="data[0]">
+  <h3>Old Images:</h3>
+  <!-- <table style="margin: 0px auto;">
+  <thead>
+    <tr>
+      <th>Index(Newest to oldest)</th>
+      <th>Img</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let img of data; index as i">
+      <td>{{i}}</td>
+      <td><img class="pImg" [src]="img['url']"></td>
+      <td><button (click)="delete(img['_id'])" mat-button>Delete</button></td>
+    </tr>
+  </tbody>
+</table> -->
+  <div class="row" style="margin: 0px 0px;">
+    <div class="col-md-12">
+      <div class="row rowborder align-items-center" *ngFor="let img of data; index as i;">
+        <div class="col-md-2">
+          {{i}}
+        </div>
+        <div class="col-md-7">
+          <img (click)="showImage(img['url'])" class="pImg" [src]="img['url']">
+        </div>
+        <div class="col-md-3">
+          <button (click)="delete(img['_id'])" mat-button>Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

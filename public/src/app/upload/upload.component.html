@@ -1,0 +1,28 @@
+<br>
+<h3>Upload Files:</h3>
+<div class="upload-btn-wrapper">
+    <button (click)="openFileInput()" type="button" class="fbtn btn grey-gradient">Upload Files</button>
+    <input #fileInput type="file" accept="image/*" multiple (change)="onChange($event)">
+</div>
+<br>
+<div class="row" style="margin:0px 0px;">
+    <div class="col-md-12">
+
+        <div class="row rowborder align-items-center" *ngFor="let map of pImgs | keyvalue; index as i;">
+            <div class="col-md-6">
+                <img [src]="map.value" (click)="showImage(map.value)">
+            </div>
+            <div class="col-md-6">
+                <span class="buttoncontainer">
+                    <button type="button" mat-button [disabled]="STATE_SWAP"
+                        (click)="remove(map.key, i)">Remove</button>
+                    <button type="button" mat-button [disabled]="STATE_SWAP" (click)="up(map.key, i)">Move Up</button>
+                    <button type="button" mat-button [disabled]="STATE_SWAP" (click)="down(map.key, i)">Move
+                        Down</button>
+                </span>
+            </div>
+        </div>
+
+
+    </div>
+</div>

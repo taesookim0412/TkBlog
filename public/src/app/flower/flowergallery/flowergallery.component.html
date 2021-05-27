@@ -1,0 +1,22 @@
+<div id="content">
+    <div class="card-columns">
+        <div class="card" *ngFor="let img of imgs">
+            <img class="card-img" (click)="showImage(img['url'])" [src]="img['url']" alt="img">
+        </div>
+    </div>
+</div>
+
+<!-- <div id="content">
+    <div class="card" *ngFor="let img of imgs; index as i; let even = even;">
+        <div *ngIf="even">
+            <div class="row">
+                <div class="col-6">
+                    <img class="card-img materialboxed" [src]="img['url']" alt="img">
+                </div>
+                <div *ngIf="imgs[i+1]" class="col-6">
+                    <img class="card-img materialboxed" [src]="imgs[i + 1]['url']" alt="img">
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->

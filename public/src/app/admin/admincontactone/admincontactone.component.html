@@ -1,0 +1,115 @@
+<div class="navrow">
+  <h3 class="h2-responsive back">
+    <a [routerLink]="['/','admin', 'contact', idx]" tabindex="0">
+      <i class="fas fa-arrow-left"></i>
+      Back to submissions</a>
+  </h3>
+</div>
+<!-- Horizontal material -->
+<div class="row" style="margin: 0px 0px;" *ngIf="contact['date']">
+  <div class="col-md-12">
+    <!-- Grid row -->
+    <div class="row">
+      <!-- Material input -->
+      <div class="col text-right">ID #</div>
+      <div class="col text-left">
+        {{ contact['cId'] }}
+      </div>
+    </div>
+    <!-- Grid row -->
+
+    <!-- Grid row -->
+    <div class="row">
+      <!-- Material input -->
+      <div class="col text-right">Date of occurence</div>
+      <div class="col text-left">
+        {{contact['date'] | date: 'MMMM d, y'}}
+      </div>
+    </div>
+    <!-- Grid row -->
+
+    <!-- Grid row -->
+    <div class="row">
+      <!-- Material input -->
+      <div class="col text-right">First name</div>
+      <div class="col text-left">
+        {{contact['firstName']}}
+      </div>
+    </div>
+    <!-- Grid row -->
+
+    <!-- Grid row -->
+    <div class="row">
+      <!-- Material input -->
+      <div class="col text-right">Last name</div>
+      <div class="col text-left">
+        {{contact['lastName']}}
+      </div>
+    </div>
+    <!-- Grid row -->
+
+    <!-- Grid row -->
+    <div class="row">
+      <!-- Material input -->
+      <div class="col text-right">Email</div>
+      <div class="col text-left">
+        {{contact['email']}}
+      </div>
+    </div>
+    <!-- Grid row -->
+
+    <!-- Grid row -->
+    <div class="row">
+      <!-- Material input -->
+      <div class="col text-right">Phone number</div>
+      <div class="col text-left">
+        {{contact['phone']}}
+      </div>
+    </div>
+    <!-- Grid row -->
+    <!-- Grid row -->
+    <div class="row">
+      <!-- Material input -->
+      <div class="col text-right">Red</div>
+      <div class="col text-left">
+        {{contact['red']}}
+      </div>
+    </div>
+    <!-- Grid row -->
+
+    <!-- Grid row -->
+    <div class="row">
+      <!-- Material input -->
+      <div class="col text-right">Green</div>
+      <div class="col text-left">
+        {{contact['green']}}
+      </div>
+    </div>
+    <!-- Grid row -->
+
+    <!-- Grid row -->
+    <div class="row">
+      <!-- Material input -->
+      <div class="col text-right">Blue</div>
+      <div class="col text-left">
+        {{contact['blue']}}
+      </div>
+    </div>
+    <!-- Grid row -->
+
+    <!-- Grid row -->
+    <div class="row">
+      <!-- Material input -->
+      <div class="col text-right">Comments</div>
+      <div class="col text-left">
+        {{contact['comments']}}
+      </div>
+    </div>
+    <!-- Grid row -->
+
+
+  </div>
+
+
+  <!-- Horizontal material form -->
+</div>

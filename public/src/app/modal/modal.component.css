@@ -1,0 +1,25 @@
+.mimg{
+    max-height: 93vh;
+    max-width: 100vw;
+    vertical-align: top;
+}
+
+.mimg:hover {
+    cursor: zoom-out;
+}
+
+/* 
+.xbutton{
+text-align: right;
+width: 100%;
+height: 0px;
+color: red;
+}
+
+.relative{
+    position: relative;
+} 
+
+.relative:hover{
+    background-color: #585454bd;
+} */

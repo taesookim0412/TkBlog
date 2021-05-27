@@ -1,0 +1,12 @@
+<div id="content">
+  <div class="card-columns">
+    <div class="card" [routerLink]="['/','collection','archive', entry['_id']]" *ngFor="let entry of data">
+      <img class="card-img-top" [src]="entry['imgs'][0]['url']" alt="entry img">
+      <div class="card-body">
+        <h5 class="card-title">{{entry['title']}}</h5>
+      </div>
+      <p class="card-text nomargin"><small class="text-muted">{{entry['date'] | date: 'MMMM d, y'}}</small></p>
+          <p class="card-text">{{entry['preview']}}</p>
+    </div>
+  </div>
+</div>

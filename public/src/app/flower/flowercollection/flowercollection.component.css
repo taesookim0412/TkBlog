@@ -1,0 +1,20 @@
+
+img{
+  max-width: 100%;
+}
+
+.card-title{
+  margin-bottom: 0px;
+}
+
+.card-body{
+  padding: 0px;
+}
+
+.nomargin{
+  margin-bottom: 0px;
+}
+
+.card:hover{
+  cursor: pointer;
+}
